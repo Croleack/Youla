@@ -11,6 +11,11 @@
 		E96084CC2BB5364C00872BAA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96084CB2BB5364C00872BAA /* ContentView.swift */; };
 		E96084CE2BB5364E00872BAA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E96084CD2BB5364E00872BAA /* Assets.xcassets */; };
 		E96084D12BB5364E00872BAA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E96084D02BB5364E00872BAA /* Preview Assets.xcassets */; };
+		E96084DC2BB5383700872BAA /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96084DB2BB5383700872BAA /* NetworkManager.swift */; };
+		E96084DE2BB5386900872BAA /* NetworkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96084DD2BB5386900872BAA /* NetworkModel.swift */; };
+		E96084E02BB538BB00872BAA /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96084DF2BB538BB00872BAA /* ImageManager.swift */; };
+		E96084E22BB5390F00872BAA /* ServiceRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96084E12BB5390F00872BAA /* ServiceRow.swift */; };
+		E96084E62BB5395300872BAA /* ServiceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96084E52BB5395300872BAA /* ServiceViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +24,11 @@
 		E96084CB2BB5364C00872BAA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E96084CD2BB5364E00872BAA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E96084D02BB5364E00872BAA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E96084DB2BB5383700872BAA /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		E96084DD2BB5386900872BAA /* NetworkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkModel.swift; sourceTree = "<group>"; };
+		E96084DF2BB538BB00872BAA /* ImageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
+		E96084E12BB5390F00872BAA /* ServiceRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceRow.swift; sourceTree = "<group>"; };
+		E96084E52BB5395300872BAA /* ServiceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,10 +61,11 @@
 		E96084C82BB5364C00872BAA /* vkYoula */ = {
 			isa = PBXGroup;
 			children = (
-				E96084C92BB5364C00872BAA /* vkYoulaApp.swift */,
-				E96084CB2BB5364C00872BAA /* ContentView.swift */,
-				E96084CD2BB5364E00872BAA /* Assets.xcassets */,
+				E96084D72BB536CD00872BAA /* Application */,
+				E96084D92BB536E700872BAA /* Common */,
+				E96084D82BB536E000872BAA /* Modules */,
 				E96084CF2BB5364E00872BAA /* Preview Content */,
+				E96084DA2BB536F200872BAA /* Services */,
 			);
 			path = vkYoula;
 			sourceTree = "<group>";
@@ -65,6 +76,58 @@
 				E96084D02BB5364E00872BAA /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E96084D72BB536CD00872BAA /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				E96084C92BB5364C00872BAA /* vkYoulaApp.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		E96084D82BB536E000872BAA /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				E96084E42BB5393000872BAA /* ViewModels */,
+				E96084E32BB5392C00872BAA /* Views */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		E96084D92BB536E700872BAA /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				E96084CD2BB5364E00872BAA /* Assets.xcassets */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		E96084DA2BB536F200872BAA /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				E96084DB2BB5383700872BAA /* NetworkManager.swift */,
+				E96084DD2BB5386900872BAA /* NetworkModel.swift */,
+				E96084DF2BB538BB00872BAA /* ImageManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		E96084E32BB5392C00872BAA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E96084CB2BB5364C00872BAA /* ContentView.swift */,
+				E96084E12BB5390F00872BAA /* ServiceRow.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E96084E42BB5393000872BAA /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				E96084E52BB5395300872BAA /* ServiceViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +200,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E96084DE2BB5386900872BAA /* NetworkModel.swift in Sources */,
+				E96084E02BB538BB00872BAA /* ImageManager.swift in Sources */,
+				E96084DC2BB5383700872BAA /* NetworkManager.swift in Sources */,
 				E96084CC2BB5364C00872BAA /* ContentView.swift in Sources */,
+				E96084E62BB5395300872BAA /* ServiceViewModel.swift in Sources */,
+				E96084E22BB5390F00872BAA /* ServiceRow.swift in Sources */,
 				E96084CA2BB5364C00872BAA /* vkYoulaApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -197,7 +265,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -254,7 +322,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -280,6 +348,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -309,6 +378,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
