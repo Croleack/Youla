@@ -14,9 +14,9 @@ class ServiceViewModel: ObservableObject {
     func fetchData() async {
 	   do {
 		  let serviceModel = try await networkManager.fetchData()
-		  DispatchQueue.main.async {
+		  await MainActor.run(body: {
 			 self.services = serviceModel.body.services
-		  }
+		  })
 	   } catch {
 		  print("Error fetching data: \(error)")
 	   }
